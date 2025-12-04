@@ -1,0 +1,76 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Broadcast2World – Video Recommender</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Broadcast2World</div>
+      <div class="subtitle">Video Recommendation Prototype</div>
+    </header>
+
+    <main class="container">
+      <section class="search-panel">
+        <h1>Find the right video for your needs</h1>
+        <p class="hint">
+          Describe your video requirement in the context of our services (e.g.
+          “90 sec explainer for B2B SaaS product launch”).
+        </p>
+
+        <form id="searchForm">
+          <label class="field">
+            <span>Describe your requirement</span>
+            <textarea
+              id="requirementInput"
+              placeholder="Example: We need a 60–90 sec explainer video for our B2B SaaS onboarding."
+              required
+            ></textarea>
+          </label>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Service type (optional)</span>
+              <select id="serviceTypeSelect">
+                <option value="">Any</option>
+                <option>Explainer Video</option>
+                <option>Product Demo</option>
+                <option>Brand Video</option>
+                <option>Training Video</option>
+                <option>Testimonial Video</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Industry (optional)</span>
+              <input
+                id="industryInput"
+                type="text"
+                placeholder="e.g. B2B SaaS, Tech Startup, HR, Mobile App"
+              />
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn">
+            Get Recommendations
+          </button>
+        </form>
+      </section>
+
+      <section class="results-panel">
+        <div id="resultsHeader" class="results-header">
+          Recommendations will appear here.
+        </div>
+        <div id="resultsContainer" class="card-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Prototype assignment – Web Development Internship | Broadcast2World
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
